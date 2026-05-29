@@ -19,6 +19,7 @@ class Task(Base):
 
     id = Column("task_id", Integer, primary_key=True, autoincrement=True)
     title = Column("title", String(255), nullable=False)
+    priority = Column("priority", String(50), default="medium")
     description = Column("description", String(255), nullable=True)
     is_completed = Column("is_completed", Boolean, default=False)
     created_at = Column("created_at", DateTime, server_default=func.now())
