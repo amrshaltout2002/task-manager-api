@@ -15,7 +15,7 @@ created_at — timestamp, default now
 class User(Base):
     __tablename__ = "users"
 
-    user_id = Column("user_id", Integer, primary_key=True, autoincrement=True)
+    id = Column("user_id", Integer, primary_key=True, autoincrement=True)
     email = Column("email", String(255), unique=True, nullable=False)
     username = Column("username", String(255), unique=True, nullable=False)
     hashed_password = Column("hashed_password", String(255), nullable=False)

@@ -17,7 +17,7 @@ owner_id — foreign key → users.id
 class Task(Base):
     __tablename__ = "tasks"
 
-    task_id = Column("task_id", Integer, primary_key=True, autoincrement=True)
+    id = Column("task_id", Integer, primary_key=True, autoincrement=True)
     title = Column("title", String(255), nullable=False)
     description = Column("description", String(255), nullable=True)
     is_completed = Column("is_completed", Boolean, default=False)
