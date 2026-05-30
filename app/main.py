@@ -13,4 +13,3 @@ app.include_router(task.router)
 def read_root():
     return {"message":"Task Manager API is running right now"}
 
-Base.metadata.create_all(bind=engine)
